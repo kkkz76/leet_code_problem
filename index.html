@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>16 <span id="dots1">:</span> 03</h1>
+</body>
+</html>
+<script>
+
+
+setInterval(myTimer, 1000);
+function myTimer() {
+  
+    document.getElementById('dots1').style.opacity = "1";
+    setTimeout(myTimer1, 500);
+    
+}
+function myTimer1() {
+  
+  document.getElementById('dots1').style.opacity = "0";
+  setTimeout(myTimer, 500);
+}
+
+
+</script>
