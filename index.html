@@ -5,18 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        h1{
+            font-size: 200px;
+            font-weight: bold;
+            text-align: center;
+        }
         
         
     </style>
     <title>Document</title>
 </head>
 <body>
-    <h1>16 <span id="dots1">:</span> 03</h1>
+    <h1><span id="hour"></span> <span id="dots1">:</span> <span id="min"></span></h1>
 </body>
 </html>
 <script>
-
-
+const d = new Date();
+let hour = d.getHours();
+document.getElementById("hour").innerHTML = hour;
+let min = d.getMinutes();
+document.getElementById("min").innerHTML = min;
 setInterval(myTimer, 1000);
 function myTimer() {
   
