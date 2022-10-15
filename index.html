@@ -20,13 +20,19 @@
 </body>
 </html>
 <script>
-const d = new Date();
+setInterval(timecheck, 10);
+
+function timecheck() {   
+    const d = new Date();
 let hour = d.getHours();
 document.getElementById("hour").innerHTML = hour;
 let min = d.getMinutes();
-document.getElementById("min").innerHTML = min;
+document.getElementById("min").innerHTML = min;}
+
+
 setInterval(myTimer, 1000);
 function myTimer() {
+ 
   
     document.getElementById('dots1').style.opacity = "1";
     setTimeout(myTimer1, 500);
