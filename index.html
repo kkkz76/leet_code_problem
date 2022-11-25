@@ -9,14 +9,23 @@
             font-size: 200px;
             font-weight: bold;
             text-align: center;
+            color: pink;
         }
-        
+        body{
+            background-color: black;
+        }
+        h3{
+            color: pink;
+            text-align: center;
+            font-size: 50px;
+        }
         
     </style>
     <title>Document</title>
 </head>
 <body>
-    <h1><span id="hour"></span> <span id="dots1">:</span> <span id="min"></span></h1>
+    <h1><span id="hour"></span> <span id="dots1">:</span> <span id="min"></span> <span id="dots2">:</span> <span id="sec"></span></h1>
+    <h3>Database Class will end in <span id="left_hour"></span> hour and <span id="left_min"></span> minutes </h3>
 </body>
 </html>
 <script>
@@ -27,7 +36,15 @@ function timecheck() {
 let hour = d.getHours();
 document.getElementById("hour").innerHTML = hour;
 let min = d.getMinutes();
-document.getElementById("min").innerHTML = min;}
+document.getElementById("min").innerHTML = min;
+let sec = d.getSeconds();
+document.getElementById("sec").innerHTML = sec;
+cal_hour = 18 - hour;
+document.getElementById("left_hour").innerHTML = cal_hour;
+cal_min = 30- min;
+document.getElementById("left_min").innerHTML = cal_min;
+
+}
 
 
 setInterval(myTimer, 1000);
